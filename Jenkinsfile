@@ -3,5 +3,5 @@
 buildDockerfile {
      image = 'stuartwarren/jenkins-kubernetes:latest'
      path = '.'
-     push = true
+     push = false
 }
