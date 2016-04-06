@@ -1,6 +1,7 @@
 FROM jenkinsci/jenkins:2.0-beta-2
 
 COPY version /usr/share/jenkins/ref/upgraded
+COPY version /usr/share/jenkins/ref/.last_exec_version
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 RUN curl -o /usr/share/jenkins/ref/plugins/kubernetes.hpi \
